@@ -1,1 +1,229 @@
-<!-- TODO -->
+<html>
+<head>
+  <title>Symbooglix ICST2016 Appendix data</title>
+</head>
+  <body>
+    <h1>Symbooglix ICST2016 Appendix</h1>
+    <p>
+      This page contains extra data that could not fit into the ICST2016
+      page limit that some may find useful and is noted as being available
+      as  &quot;on the project website &quot;.
+    </p>
+
+    <h2>Run of Symbooglix snapshots on all benchmarks</h2>
+    <p>
+      To optimise Symbooglix we ran it on a randomly selected
+      subset (10%) of each benchmark suite (SV-COMP and GPU) which we refer
+      to as the &quot;training set&quot;. We then
+      optimised Symbooglix using only this &quot;training set&quot; taking
+      periodic snapshots of the tool and running it on those bencharks.
+    </p>
+    <p>
+      In the paper we provided &quot;quantile plots&quot; for each benchmark
+      suite where we ran each Symbooglix snapshot on the &quot;training set&quot;.
+      We now show these plots along side quanitle plots where those snapshots
+      have been run on all the benchmarks.
+    </p>
+
+    <img src="sbx_gpu_opt.svg"
+         title="Symbooglix snapshots run on the GPU portion of the training set"/>
+    <img src="sbx_gpu_all.svg"
+         title="Symbooglix snapshots run on all the GPU benchmarks"/>
+    <br/>
+    <img src="sbx_svcomp_opt.svg"
+         title="Symbooglix snapshots run on the SVCOMP portion of the training set"/>
+    <img src="sbx_svcomp_all.svg"
+         title="Symbooglix snapshots run on all SVCOMP benchmarks"/>
+    <br/>
+
+    <h3>Result type counts for GPU</h3>
+    <p>
+      Here are the classification counts when running on the training set.
+    </p>
+    <table>
+      <tr>
+        <th>Snapshot</th>
+        <th>Verified</th>
+        <th>Bug found</th>
+        <th>False alarm</th>
+        <th>Unknown</th>
+      </tr>
+      <tr>
+        <td>Baseline</td>
+        <td>33</td>
+        <td>3</td>
+        <td>0</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td>GlobalDDE</td>
+        <td>33</td>
+        <td>3</td>
+        <td>0</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td>GotoAssumeLA</td>
+        <td>33</td>
+        <td>3</td>
+        <td>0</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td>ExprSimpl</td>
+        <td>33</td>
+        <td>3</td>
+        <td>0</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td>ConstrIndep</td>
+        <td>33</td>
+        <td>3</td>
+        <td>0</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td>RemSomeRecur</td>
+        <td>37</td>
+        <td>3</td>
+        <td>0</td>
+        <td>17</td>
+      </tr>
+      <tr>
+        <td>RemSomeDbg</td>
+        <td>37</td>
+        <td>3</td>
+        <td>0</td>
+        <td>17</td>
+      </tr>
+      <tr>
+        <td>MapConstIdx</td>
+        <td>37</td>
+        <td>3</td>
+        <td>0</td>
+        <td>17</td>
+      </tr>
+      <tr>
+        <td>MapSymIdx</td>
+        <td>37</td>
+        <td>3</td>
+        <td>0</td>
+        <td>17</td>
+      </tr>
+      <tr>
+        <td>EffcntClone</td>
+        <td>37</td>
+        <td>3</td>
+        <td>0</td>
+        <td>17</td>
+      </tr>
+      <tr>
+        <td>SimplSolv</td>
+        <td>37</td>
+        <td>3</td>
+        <td>0</td>
+        <td>17</td>
+      </tr>
+    </table>
+
+    <p>
+      Here are the classification counts when running on the whole GPU benchmark suite.
+    </p>
+
+    <table>
+      <tr>
+        <th>Snapshot</th>
+        <th>Verified</th>
+        <th>Bug found</th>
+        <th>False alarm</th>
+        <th>Unknown</th>
+      </tr>
+      <tr>
+        <td>Baseline</td>
+        <td>260</td>
+        <td>29</td>
+        <td>0</td>
+        <td>290</td>
+      </tr>
+      <tr>
+        <td>GlobalDDE</td>
+        <td>260</td>
+        <td>29</td>
+        <td>0</td>
+        <td>290</td>
+      </tr>
+      <tr>
+        <td>GotoAssumeLA</td>
+        <td>261</td>
+        <td>31</td>
+        <td>0</td>
+        <td>287</td>
+      </tr>
+      <tr>
+        <td>ExprSimpl</td>
+        <td>268</td>
+        <td>31</td>
+        <td>0</td>
+        <td>280</td>
+      </tr>
+      <tr>
+        <td>ConstrIndep</td>
+        <td>266</td>
+        <td>31</td>
+        <td>0</td>
+        <td>282</td>
+      </tr>
+      <tr>
+        <td>RemSomeRecur</td>
+        <td>301</td>
+        <td>35</td>
+        <td>0</td>
+        <td>243</td>
+      </tr>
+      <tr>
+        <td>RemSomeDbg</td>
+        <td>301</td>
+        <td>35</td>
+        <td>0</td>
+        <td>243</td>
+      </tr>
+      <tr>
+        <td>MapConstIdx</td>
+        <td>303</td>
+        <td>35</td>
+        <td>0</td>
+        <td>241</td>
+      </tr>
+      <tr>
+        <td>MapSymIdx</td>
+        <td>302</td>
+        <td>35</td>
+        <td>0</td>
+        <td>242</td>
+      </tr>
+      <tr>
+        <td>EffcntClone</td>
+        <td>300</td>
+        <td>35</td>
+        <td>0</td>
+        <td>244</td>
+      </tr>
+      <tr>
+        <td>SimplSolv</td>
+        <td>301</td>
+        <td>35</td>
+        <td>0</td>
+        <td>243</td>
+      </tr>
+    </table>
+    <h3>Result type counts for GPU</h3>
+    <p>
+      TODO
+    </p>
+    <h2>Scatter plot of Symbooglix vs Duality</h2>
+    <p>
+      TODO
+    </p>
+  </body>
+</html>
