@@ -342,6 +342,13 @@
         <td>317</td>
       </tr>
     </table>
+    <p>
+      One observation about the above table is that between MapConstIdx and RemSomeDbg one
+      less bug was found. This was the <code>array-examples/standard_seq_init_true-unreach-call_ground.i_.bpl</code>
+      benchmark. In RemSombDbg the bug was found very close to the timeout and so the either
+      result inconsistency (due to running on our compute cluster) or slight overhead added
+      by MapConstIdx lead to this benchmark timing out for MapConstIdx.
+    </p>
 
     <p>
       Here are the classification counts when running on the whole SVCOMP benchmark suite.
@@ -433,6 +440,18 @@
         <td>3119</td>
       </tr>
     </table>
+      <p>
+        A few observations about the above table:
+      </p>
+      <ul>
+        <li>Between EffcntClone and SmplSolv a regression ocurred where one less bug was found. This was the
+          <code>ldv-consumption/32_7a_cilled_false-unreach-call_linux-3.8-rc1-32_7a-fs--ecryptfs--ecryptfs.ko-ldv_main1_sequence_infinite_withcheck_stateful.cil.out.c_.bpl</code> benchmark. The bug was previously in aprroximately 450 seconds but for a SmplSolv a timeout was hit.</li>
+        <li>
+          The results of the final snapshot don't precisely match the results used for the tool comparision in
+          the paper. The exact cause of this is unknown and is <a href="https://github.com/symbooglix/symbooglix/issues/16">being investigated.</a>
+        </li>
+      </ul>
+
     <h2>Scatter plot of Symbooglix vs Duality</h2>
     <p>
       TODO
