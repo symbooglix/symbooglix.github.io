@@ -22,7 +22,9 @@
       In the paper we provided &quot;quantile plots&quot; for each benchmark
       suite where we ran each Symbooglix snapshot on the &quot;training set&quot;.
       We now show these plots along side quanitle plots where those snapshots
-      have been run on all the benchmarks.
+      have been run on all the benchmarks. This was done after we had performed
+      optimisation so we did not have access to this data during our optimisation
+      process to guide our optimisations.
     </p>
 
     <img src="sbx_gpu_opt.svg"
@@ -217,6 +219,39 @@
         <td>243</td>
       </tr>
     </table>
+
+    <p>
+      Looking at the table above a few interesting things can be observed.
+    </p>
+    <ul>
+      <li>
+        Between ConstrIndep and ExprSimpl a regression occurred where two less
+        benchmkars were verified
+        (<code>CUDA50/6_Advanced/mergeSort/mergeRanksAndIndicesKernel.bpl</code>
+        and <code>polybench/stencils/jacobi-1d-imper/kernel0.bpl</code>). These
+        benchmarks weren't in the training set.  It is unclear whether these
+        are significant though as the two benchmarks that no longer verified
+        with ExprSimpl were very close to the timeout in the ConstrIndep
+        snapshot. Those two benchmarks in the next snapshot (RemSomeRecur)
+        verified in under 22 seconds.
+      </li>
+      <li>
+        Between MapConstIdx and MapSymIdx one less benchmark (<code>shoc/s3d/qssab/kernel.bpl</code>)
+        was verified. In the ``MapConstIdx`` this benchmark verified very close to the timeout so it
+        is likely that the added overhead pushed this over the timeout.
+      </li>
+      <li>
+        Between MapSymIdx and EffcntClone two less benchmarks (<code>gpgpu-sim_ispass2009/RAY/renderPixel.bpl</code>
+        and <code>shoc/devicememory/readGlobalMemoryCoalesced/kernel.bpl</code>) verified. This is a significant
+        regression the former used to verify in ~14 seconds and in the newer snapshot hits a timeout and for the
+        later it used to verify in ~610 seconds and in the newer snapshot hits a timeout.
+      </li>
+      <li>
+        The results of the final snapshot don't precisely match the results used for the tool comparision in
+        the paper. The exact cause of this is unknown and is <a href="https://github.com/symbooglix/symbooglix/issues/16">being investigated.</a>
+      </li>
+    </ul>
+
     <h3>Result type counts for SVCOMP</h3>
     <p>
       Here are the classification counts when running on the training set.
