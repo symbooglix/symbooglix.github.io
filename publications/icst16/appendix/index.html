@@ -217,10 +217,187 @@
         <td>243</td>
       </tr>
     </table>
-    <h3>Result type counts for GPU</h3>
+    <h3>Result type counts for SVCOMP</h3>
     <p>
-      TODO
+      Here are the classification counts when running on the training set.
     </p>
+    <table>
+      <tr>
+        <th>Snapshot</th>
+        <th>Verified</th>
+        <th>Bug found</th>
+        <th>False alarm</th>
+        <th>Unknown</th>
+      </tr>
+      <tr>
+        <td>Baseline</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>374</td>
+      </tr>
+      <tr>
+        <td>GlobalDDE</td>
+        <td>9</td>
+        <td>35</td>
+        <td>0</td>
+        <td>330</td>
+      </tr>
+      <tr>
+        <td>GotoAssumeLA</td>
+        <td>9</td>
+        <td>36</td>
+        <td>0</td>
+        <td>329</td>
+      </tr>
+      <tr>
+        <td>ExprSimpl</td>
+        <td>14</td>
+        <td>37</td>
+        <td>0</td>
+        <td>323</td>
+      </tr>
+      <tr>
+        <td>ConstrIndep</td>
+        <td>15</td>
+        <td>37</td>
+        <td>0</td>
+        <td>322</td>
+      </tr>
+      <tr>
+        <td>RemSomeRecur</td>
+        <td>15</td>
+        <td>39</td>
+        <td>0</td>
+        <td>320</td>
+      </tr>
+      <tr>
+        <td>RemSomeDbg</td>
+        <td>15</td>
+        <td>39</td>
+        <td>0</td>
+        <td>320</td>
+      </tr>
+      <tr>
+        <td>MapConstIdx</td>
+        <td>15</td>
+        <td>38</td>
+        <td>0</td>
+        <td>321</td>
+      </tr>
+      <tr>
+        <td>MapSymIdx</td>
+        <td>17</td>
+        <td>40</td>
+        <td>0</td>
+        <td>317</td>
+      </tr>
+      <tr>
+        <td>EffcntClone</td>
+        <td>17</td>
+        <td>40</td>
+        <td>0</td>
+        <td>317</td>
+      </tr>
+      <tr>
+        <td>SimplSolv</td>
+        <td>17</td>
+        <td>40</td>
+        <td>0</td>
+        <td>317</td>
+      </tr>
+    </table>
+
+    <p>
+      Here are the classification counts when running on the whole SVCOMP benchmark suite.
+    </p>
+
+    <table>
+      <tr>
+        <th>Snapshot</th>
+        <th>Verified</th>
+        <th>Bug found</th>
+        <th>False alarm</th>
+        <th>Unknown</th>
+      </tr>
+      <tr>
+        <td>Baseline</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>3749</td>
+      </tr>
+      <tr>
+        <td>GlobalDDE</td>
+        <td>141</td>
+        <td>339</td>
+        <td>0</td>
+        <td>3269</td>
+      </tr>
+      <tr>
+        <td>GotoAssumeLA</td>
+        <td>141</td>
+        <td>363</td>
+        <td>0</td>
+        <td>3245</td>
+      </tr>
+      <tr>
+        <td>ExprSimpl</td>
+        <td>200</td>
+        <td>390</td>
+        <td>0</td>
+        <td>3159</td>
+      </tr>
+      <tr>
+        <td>ConstrIndep</td>
+        <td>204</td>
+        <td>392</td>
+        <td>0</td>
+        <td>3153</td>
+      </tr>
+      <tr>
+        <td>RemSomeRecur</td>
+        <td>204</td>
+        <td>393</td>
+        <td>0</td>
+        <td>3152</td>
+      </tr>
+      <tr>
+        <td>RemSomeDbg</td>
+        <td>204</td>
+        <td>393</td>
+        <td>0</td>
+        <td>3152</td>
+      </tr>
+      <tr>
+        <td>MapConstIdx</td>
+        <td>204</td>
+        <td>393</td>
+        <td>0</td>
+        <td>3152</td>
+      </tr>
+      <tr>
+        <td>MapSymIdx</td>
+        <td>236</td>
+        <td>395</td>
+        <td>0</td>
+        <td>3118</td>
+      </tr>
+      <tr>
+        <td>EffcntClone</td>
+        <td>236</td>
+        <td>395</td>
+        <td>0</td>
+        <td>3118</td>
+      </tr>
+      <tr>
+        <td>SimplSolv</td>
+        <td>236</td>
+        <td>394</td>
+        <td>0</td>
+        <td>3119</td>
+      </tr>
+    </table>
     <h2>Scatter plot of Symbooglix vs Duality</h2>
     <p>
       TODO
